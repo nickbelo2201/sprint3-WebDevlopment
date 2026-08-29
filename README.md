@@ -56,7 +56,7 @@ Este projeto **não possui autenticação/login** — todos os dados ficam salvo
 
 ## Link do Deploy na Vercel
 
-<!-- DEPLOY_URL -->
+https://minhagrana-tau.vercel.app
 
 ## Link do repositório
 
