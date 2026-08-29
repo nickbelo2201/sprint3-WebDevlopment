@@ -6,6 +6,8 @@ import Captura from './components/Captura'
 import Estatisticas from './components/Estatisticas'
 import Galeria from './components/Galeria'
 import Albuns from './components/Albuns'
+import Historico from './components/Historico'
+import Lixeira from './components/Lixeira'
 import { carregar, salvar } from './utils/storage'
 import './App.css'
 
@@ -91,6 +93,8 @@ function App() {
             onMoverAlbum={moverParaAlbum}
           />
           <Albuns albuns={albuns} capturas={capturas} onCriar={criarAlbum} />
+          <Historico historico={historico} />
+          <Lixeira lixeira={lixeira} onRestaurar={restaurarCaptura} onExcluirDefinitivo={excluirDefinitivo} />
         </div>
       </main>
       <Footer />

@@ -377,3 +377,91 @@
 .estatistica-linha .barra-preenchida {
   background: var(--cor-modo, #0f766e);
 }
+
+.historico ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.historico-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px;
+  background: #f9fafb;
+  font-size: 0.85rem;
+}
+
+.historico-acao {
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.historico-adicionado .historico-acao {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.historico-removido .historico-acao {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.historico-restaurado .historico-acao {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.historico-data {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.lixeira-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1rem;
+}
+
+.lixeira-item {
+  background: #f9fafb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lixeira-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.lixeira-acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.5rem;
+}
+
+.lixeira-acoes button {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.3rem;
+  font-size: 0.75rem;
+}
