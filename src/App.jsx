@@ -58,11 +58,15 @@ function App() {
     <>
       <Header saldo={saldo} />
       <main className="conteudo">
-        <TransactionForm onAdicionar={addTransaction} />
-        <DicaFinanceira />
-        <Summary transactions={transactions} />
-        <TransactionList transactions={transactions} onExcluir={softDelete} />
-        <Trash trash={trash} onRestaurar={restore} onExcluirDefinitivo={hardDelete} />
+        <div className="coluna">
+          <TransactionForm onAdicionar={addTransaction} />
+          <DicaFinanceira />
+        </div>
+        <div className="coluna">
+          <Summary transactions={transactions} />
+          <TransactionList transactions={transactions} onExcluir={softDelete} />
+          <Trash trash={trash} onRestaurar={restore} onExcluirDefinitivo={hardDelete} />
+        </div>
       </main>
       <Footer />
     </>

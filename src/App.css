@@ -32,6 +32,36 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.coluna {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+@media (min-width: 800px) {
+  .conteudo {
+    grid-template-columns: 1fr 1.3fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 480px) {
+  .cabecalho {
+    padding: 1.5rem 1rem;
+  }
+
+  .saldo strong {
+    font-size: 1.5rem;
+  }
+
+  .resumo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .rodape {
