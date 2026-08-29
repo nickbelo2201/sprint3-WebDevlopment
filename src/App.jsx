@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import TransactionForm from './components/TransactionForm'
+import TransactionList from './components/TransactionList'
 import './App.css'
 
 function novoId() {
@@ -18,6 +19,10 @@ function App() {
     ])
   }
 
+  function removeTransaction(id) {
+    setTransactions((atuais) => atuais.filter((t) => t.id !== id))
+  }
+
   const saldo = transactions.reduce((total, t) => {
     return t.tipo === 'receita' ? total + t.valor : total - t.valor
   }, 0)
@@ -27,6 +32,7 @@ function App() {
       <Header saldo={saldo} />
       <main className="conteudo">
         <TransactionForm onAdicionar={addTransaction} />
+        <TransactionList transactions={transactions} onExcluir={removeTransaction} />
       </main>
       <Footer />
     </>
