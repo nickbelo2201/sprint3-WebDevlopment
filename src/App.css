@@ -1,0 +1,35 @@
+.cabecalho {
+  background: linear-gradient(135deg, #0f766e, #134e4a);
+  color: #fff;
+  padding: 2rem 1.5rem;
+}
+
+.cabecalho-conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.subtitulo {
+  margin: 0 0 1.25rem 0;
+  opacity: 0.85;
+}
+
+.saldo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.saldo strong {
+  font-size: 2rem;
+}
+
+.saldo-negativo strong {
+  color: #fca5a5;
+}
+
+.conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
