@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import TransactionForm from './components/TransactionForm'
 import TransactionList from './components/TransactionList'
 import Summary from './components/Summary'
+import Trash from './components/Trash'
 import './App.css'
 
 function novoId() {
@@ -12,6 +13,7 @@ function novoId() {
 
 function App() {
   const [transactions, setTransactions] = useState([])
+  const [trash, setTrash] = useState([])
 
   function addTransaction(transacao) {
     setTransactions((atuais) => [
@@ -20,8 +22,22 @@ function App() {
     ])
   }
 
-  function removeTransaction(id) {
+  function softDelete(id) {
+    const item = transactions.find((t) => t.id === id)
+    if (!item) return
     setTransactions((atuais) => atuais.filter((t) => t.id !== id))
+    setTrash((atuais) => [item, ...atuais])
+  }
+
+  function restore(id) {
+    const item = trash.find((t) => t.id === id)
+    if (!item) return
+    setTrash((atuais) => atuais.filter((t) => t.id !== id))
+    setTransactions((atuais) => [item, ...atuais])
+  }
+
+  function hardDelete(id) {
+    setTrash((atuais) => atuais.filter((t) => t.id !== id))
   }
 
   const saldo = transactions.reduce((total, t) => {
@@ -34,7 +50,8 @@ function App() {
       <main className="conteudo">
         <TransactionForm onAdicionar={addTransaction} />
         <Summary transactions={transactions} />
-        <TransactionList transactions={transactions} onExcluir={removeTransaction} />
+        <TransactionList transactions={transactions} onExcluir={softDelete} />
+        <Trash trash={trash} onRestaurar={restore} onExcluirDefinitivo={hardDelete} />
       </main>
       <Footer />
     </>

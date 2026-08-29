@@ -188,3 +188,38 @@
 .cor-despesa {
   color: #b91c1c;
 }
+
+.lixeira {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.lixeira ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.item-lixeira {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #6b7280;
+}
+
+.item-lixeira .item-acoes button {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+}
