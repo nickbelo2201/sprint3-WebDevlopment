@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <Header saldo={saldo} />
       <main className="conteudo"></main>
+      <Footer />
     </>
   )
 }
