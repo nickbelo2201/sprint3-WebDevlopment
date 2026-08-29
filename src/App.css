@@ -207,3 +207,88 @@
   border: 1px solid #0f766e;
   color: #0f766e;
 }
+
+.galeria-busca {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.galeria-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.captura-item {
+  background: #f9fafb;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.captura-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.captura-destaque {
+  outline: 2px solid #0f766e;
+  outline-offset: -2px;
+}
+
+.captura-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.6rem 0.3rem 0.6rem;
+  gap: 0.4rem;
+}
+
+.captura-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--cor-modo, #6b7280);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+.captura-data {
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+.captura-item-acoes {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 0.6rem 0.6rem 0.6rem;
+}
+
+.captura-item-acoes select {
+  flex: 1;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.captura-item-acoes button {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+}
+
+.vazio {
+  color: #6b7280;
+}

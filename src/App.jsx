@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import SugestaoModo from './components/SugestaoModo'
 import Captura from './components/Captura'
+import Galeria from './components/Galeria'
 import { carregar, salvar } from './utils/storage'
 import './App.css'
 
@@ -79,7 +80,14 @@ function App() {
           <SugestaoModo />
           <Captura onCapturar={adicionarCaptura} />
         </div>
-        <div className="coluna"></div>
+        <div className="coluna">
+          <Galeria
+            capturas={capturas}
+            albuns={albuns}
+            onExcluir={excluirCaptura}
+            onMoverAlbum={moverParaAlbum}
+          />
+        </div>
       </main>
       <Footer />
     </>
