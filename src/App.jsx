@@ -5,6 +5,7 @@ import TransactionForm from './components/TransactionForm'
 import TransactionList from './components/TransactionList'
 import Summary from './components/Summary'
 import Trash from './components/Trash'
+import DicaFinanceira from './components/DicaFinanceira'
 import './App.css'
 
 function novoId() {
@@ -49,6 +50,7 @@ function App() {
       <Header saldo={saldo} />
       <main className="conteudo">
         <TransactionForm onAdicionar={addTransaction} />
+        <DicaFinanceira />
         <Summary transactions={transactions} />
         <TransactionList transactions={transactions} onExcluir={softDelete} />
         <Trash trash={trash} onRestaurar={restore} onExcluirDefinitivo={hardDelete} />
