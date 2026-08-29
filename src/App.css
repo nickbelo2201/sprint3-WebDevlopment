@@ -27,20 +27,17 @@
 .subtitulo {
   margin: 0.4rem 0 1.25rem 0;
   opacity: 0.85;
+  max-width: 40ch;
 }
 
-.saldo {
+.contador {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.saldo strong {
+.contador strong {
   font-size: 2rem;
-}
-
-.saldo-negativo strong {
-  color: #fca5a5;
 }
 
 .conteudo {
@@ -70,12 +67,8 @@
     padding: 1.5rem 1rem;
   }
 
-  .saldo strong {
+  .contador strong {
     font-size: 1.5rem;
-  }
-
-  .resumo-grid {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -90,225 +83,10 @@
   margin: 0.2rem 0;
 }
 
-.formulario {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-}
-
-.formulario label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  font-size: 0.9rem;
-  color: #4b5563;
-}
-
-.formulario input,
-.formulario select {
-  padding: 0.5rem 0.6rem;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.formulario button {
-  margin-top: 0.5rem;
-  background: #0f766e;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.7rem;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.formulario button:hover {
-  background: #0d5c56;
-}
-
-.lista {
+.cartao {
   background: #fff;
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 1.5rem;
-}
-
-.lista ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.6rem 0.75rem;
-  border-radius: 8px;
-  background: #f9fafb;
-}
-
-.item-info {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.item-info > div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.item-icone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.item-icone-receita {
-  background: #dcfce7;
-  color: #15803d;
-}
-
-.item-icone-despesa {
-  background: #fee2e2;
-  color: #b91c1c;
-}
-
-.item-categoria {
-  font-size: 0.8rem;
-  color: #6b7280;
-}
-
-.item-acoes {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.item-valor {
-  font-weight: 600;
-}
-
-.item-receita .item-valor {
-  color: #15803d;
-}
-
-.item-despesa .item-valor {
-  color: #b91c1c;
-}
-
-.item-acoes button {
-  background: transparent;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  padding: 0.3rem 0.5rem;
-}
-
-.vazio {
-  color: #6b7280;
-}
-
-.resumo {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
-}
-
-.resumo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-}
-
-.resumo-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  background: #f9fafb;
-  border-radius: 8px;
-  padding: 0.75rem;
-}
-
-.resumo-item span {
-  font-size: 0.8rem;
-  color: #6b7280;
-}
-
-.cor-receita {
-  color: #15803d;
-}
-
-.cor-despesa {
-  color: #b91c1c;
-}
-
-.lixeira {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
-}
-
-.lixeira ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.item-lixeira {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.6rem 0.75rem;
-  border-radius: 8px;
-  background: #f9fafb;
-  color: #6b7280;
-}
-
-.item-lixeira .item-acoes button {
-  background: transparent;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  padding: 0.3rem 0.5rem;
-  font-size: 0.8rem;
-}
-
-.dica {
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
-  border-radius: 12px;
-  padding: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.dica button {
-  margin-top: 0.5rem;
-  background: transparent;
-  border: 1px solid #0f766e;
-  color: #0f766e;
-  border-radius: 8px;
-  padding: 0.4rem 0.8rem;
-  font-weight: 600;
 }
