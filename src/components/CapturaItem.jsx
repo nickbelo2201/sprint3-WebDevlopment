@@ -16,7 +16,7 @@ function CapturaItem({ captura, albuns, onExcluir, onMoverAlbum, destaque }) {
       <div className="captura-item-acoes">
         <select
           value={captura.albumId ?? ''}
-          onChange={(e) => onMoverAlbum(captura.id, e.target.value || null)}
+          onChange={(e) => onMoverAlbum(captura.id, e.target.value ? Number(e.target.value) : null)}
         >
           <option value="">Sem álbum</option>
           {albuns.map((a) => (
