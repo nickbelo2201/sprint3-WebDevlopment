@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import TransactionForm from './components/TransactionForm'
 import TransactionList from './components/TransactionList'
+import Summary from './components/Summary'
 import './App.css'
 
 function novoId() {
@@ -32,6 +33,7 @@ function App() {
       <Header saldo={saldo} />
       <main className="conteudo">
         <TransactionForm onAdicionar={addTransaction} />
+        <Summary transactions={transactions} />
         <TransactionList transactions={transactions} onExcluir={removeTransaction} />
       </main>
       <Footer />
