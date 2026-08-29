@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import SugestaoModo from './components/SugestaoModo'
 import Captura from './components/Captura'
+import Estatisticas from './components/Estatisticas'
 import Galeria from './components/Galeria'
 import Albuns from './components/Albuns'
 import { carregar, salvar } from './utils/storage'
@@ -80,6 +81,7 @@ function App() {
         <div className="coluna">
           <SugestaoModo />
           <Captura onCapturar={adicionarCaptura} />
+          <Estatisticas capturas={capturas} />
         </div>
         <div className="coluna">
           <Galeria

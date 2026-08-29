@@ -337,3 +337,43 @@
   opacity: 0.85;
   font-weight: 400;
 }
+
+.estatisticas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.estatistica-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.estatistica-item span {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.estatisticas-barras {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.estatistica-linha {
+  display: grid;
+  grid-template-columns: 70px 1fr 40px;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.estatistica-linha .barra-preenchida {
+  background: var(--cor-modo, #0f766e);
+}
