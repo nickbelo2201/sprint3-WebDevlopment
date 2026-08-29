@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import TransactionForm from './components/TransactionForm'
@@ -6,6 +6,7 @@ import TransactionList from './components/TransactionList'
 import Summary from './components/Summary'
 import Trash from './components/Trash'
 import DicaFinanceira from './components/DicaFinanceira'
+import { carregar, salvar } from './utils/storage'
 import './App.css'
 
 function novoId() {
@@ -13,8 +14,16 @@ function novoId() {
 }
 
 function App() {
-  const [transactions, setTransactions] = useState([])
-  const [trash, setTrash] = useState([])
+  const [transactions, setTransactions] = useState(() => carregar('transacoes', []))
+  const [trash, setTrash] = useState(() => carregar('lixeira', []))
+
+  useEffect(() => {
+    salvar('transacoes', transactions)
+  }, [transactions])
+
+  useEffect(() => {
+    salvar('lixeira', trash)
+  }, [trash])
 
   function addTransaction(transacao) {
     setTransactions((atuais) => [
