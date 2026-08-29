@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import SugestaoModo from './components/SugestaoModo'
 import Captura from './components/Captura'
 import Galeria from './components/Galeria'
+import Albuns from './components/Albuns'
 import { carregar, salvar } from './utils/storage'
 import './App.css'
 
@@ -87,6 +88,7 @@ function App() {
             onExcluir={excluirCaptura}
             onMoverAlbum={moverParaAlbum}
           />
+          <Albuns albuns={albuns} capturas={capturas} onCriar={criarAlbum} />
         </div>
       </main>
       <Footer />
