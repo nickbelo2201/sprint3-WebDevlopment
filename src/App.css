@@ -9,8 +9,23 @@
   margin: 0 auto;
 }
 
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.marca h1 {
+  margin: 0;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
 .subtitulo {
-  margin: 0 0 1.25rem 0;
+  margin: 0.4rem 0 1.25rem 0;
   opacity: 0.85;
 }
 
@@ -145,8 +160,34 @@
 
 .item-info {
   display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.item-info > div {
+  display: flex;
   flex-direction: column;
   gap: 0.15rem;
+}
+
+.item-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.item-icone-receita {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.item-icone-despesa {
+  background: #fee2e2;
+  color: #b91c1c;
 }
 
 .item-categoria {
