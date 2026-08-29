@@ -129,3 +129,81 @@
   padding: 0.4rem 0.8rem;
   font-weight: 600;
 }
+
+.modos {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.modo-btn {
+  border: 2px solid var(--cor-modo);
+  color: var(--cor-modo);
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.modo-ativo {
+  background: var(--cor-modo);
+  color: #fff;
+}
+
+.visor {
+  position: relative;
+  background: #111827;
+  border-radius: 10px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.visor video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visor-oculto {
+  display: none;
+}
+
+.visor-mensagem {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d1d5db;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.captura-acoes {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.captura-acoes button {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  background: #0f766e;
+  color: #fff;
+}
+
+.captura-acoes button:disabled {
+  opacity: 0.5;
+}
+
+.captura-acoes .secundario {
+  background: transparent;
+  border: 1px solid #0f766e;
+  color: #0f766e;
+}
