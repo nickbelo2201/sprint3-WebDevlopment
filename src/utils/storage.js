@@ -1,4 +1,4 @@
-const PREFIXO = 'minhagrana_'
+const PREFIXO = 'jovilens_'
 
 export function carregar(chave, valorPadrao) {
   try {
